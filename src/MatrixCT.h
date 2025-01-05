@@ -5,6 +5,7 @@
 #include <vector>
 #include <tuple>
 #include <fstream>
+#include <cstring>
 
 template<typename T, int row_number, int column_number>
 class MatrixCT {
