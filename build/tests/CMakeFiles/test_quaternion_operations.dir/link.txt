@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_quaternion_operations.dir/test_quaternion_operations.cpp.o -o test_quaternion_operations  ../src/libquaternion_operations.a /opt/homebrew/lib/libcunit.dylib

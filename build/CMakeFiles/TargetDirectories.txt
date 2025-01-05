@@ -1,0 +1,9 @@
+/Users/alexandrshain/cpp/Quaternions/build/CMakeFiles/edit_cache.dir
+/Users/alexandrshain/cpp/Quaternions/build/CMakeFiles/rebuild_cache.dir
+/Users/alexandrshain/cpp/Quaternions/build/src/CMakeFiles/quaternion_operations.dir
+/Users/alexandrshain/cpp/Quaternions/build/src/CMakeFiles/e.dir
+/Users/alexandrshain/cpp/Quaternions/build/src/CMakeFiles/edit_cache.dir
+/Users/alexandrshain/cpp/Quaternions/build/src/CMakeFiles/rebuild_cache.dir
+/Users/alexandrshain/cpp/Quaternions/build/tests/CMakeFiles/test_quaternion_operations.dir
+/Users/alexandrshain/cpp/Quaternions/build/tests/CMakeFiles/edit_cache.dir
+/Users/alexandrshain/cpp/Quaternions/build/tests/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libquaternion_operations.a CMakeFiles/quaternion_operations.dir/main.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libquaternion_operations.a
