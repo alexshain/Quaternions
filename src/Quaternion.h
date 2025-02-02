@@ -125,6 +125,22 @@ public:
         std::cout << result << std::endl;
     }
 
+    T getA() const {
+        return a_;
+    }
+
+    T getB() const {
+        return b_;
+    }
+
+    T getC() const {
+        return c_;
+    }
+
+    T getD() const {
+        return d_;
+    }
+
     friend Quaternion<T> operator+(std::complex<T> complex_number, const Quaternion<T>& other) {
         Quaternion q_complex = Quaternion{complex_number};
         return Quaternion{q_complex.quaternion_ + other.quaternion_};

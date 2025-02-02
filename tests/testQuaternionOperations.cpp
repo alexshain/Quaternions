@@ -4,11 +4,14 @@
 #include <iostream>
 
 TEST(testSum, QuaterAndQuater) {
-    Quaternion quater1 = Quaternion{1, -2, -3, 4};
-    Quaternion quater2 = Quaternion{1, 2, 3, 4};
+    Quaternion quater1 = Quaternion<double>{1, -2, -3, 4};
+    Quaternion quater2 = Quaternion<double>{1.1, 2.2, 3, 4};
     Quaternion result = quater1 + quater2;
-    Quaternion assert_quater = Quaternion(2, 0, 0, 8);
-    EXPECT_EQ(result, assert_quater);
+    Quaternion assert_quater = Quaternion<double>(2.1, 0.2, 0, 8);
+    EXPECT_NEAR(result.getA(), assert_quater.getA(), 1e-6);
+    EXPECT_NEAR(result.getB(), assert_quater.getB(), 1e-6);
+    EXPECT_NEAR(result.getC(), assert_quater.getC(), 1e-6);
+    EXPECT_NEAR(result.getD(), assert_quater.getD(), 1e-6);
 }
 
 TEST(testSum, QuaterAndComplex) {
@@ -28,10 +31,10 @@ TEST(testSum, ComplexAndQuater) {
 }
 
 TEST(testSum, QuaterAndScalar) {
-    Quaternion quater = Quaternion(6, -7, -8, 9);
-    int scalar = 5;
+    Quaternion quater = Quaternion<double>(6, -7, -8, 9);
+    double scalar = 5.6;
     Quaternion result = quater + scalar;
-    Quaternion assert_quater = Quaternion(11, -7, -8, 9);
+    Quaternion assert_quater = Quaternion<double>(11.6, -7, -8, 9);
     EXPECT_EQ(result, assert_quater);
 }
 
