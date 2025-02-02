@@ -1,22 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+project(RescaleTests)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 enable_testing()
 
-# Укажите путь к файлу FindCUnit.cmake
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/tests")
+find_package(GTest REQUIRED)
+include_directories(/opt/homebrew/Cellar/googletest/1.15.2/include)
+link_directories(/opt/homebrew/Cellar/googletest/1.15.2/lib)
 
-# Найти библиотеку CUnit
-find_package(CUnit REQUIRED)
+add_executable(quaternion_test testQuaternionOperations.cpp )
 
-# Укажите директорию с заголовочными файлами
-include_directories(${CUnit_INCLUDE_DIRS})
+target_link_libraries(quaternion_test gtest gtest_main pthread quaternion_operations)
 
-# Создаем исполнимый файл с тестами
-add_executable(test_quaternion_operations test_quaternion_operations.cpp)
-
-# Линковка с библиотеками
-target_link_libraries(test_quaternion_operations
-    quaternion_operations
-    ${CUnit_LIBRARIES}
-)
-
-# Добавляем тесты в CTest
-add_test(NAME QuaternionOperationsTest COMMAND test_quaternion_operations)
+add_test(NAME QuaternionOperationsTest COMMAND quaternion_test)
