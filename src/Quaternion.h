@@ -39,6 +39,13 @@ public:
         fillQuatMatrix();
     }
 
+    Quaternion(const Quaternion<T>& quaternion) : 
+        a_(quaternion.a_),
+        b_(quaternion.b_),
+        c_(quaternion.c_),
+        d_(quaternion.d_),
+        quaternion_(quaternion.quaternion_)  {}
+
     Quaternion operator+(const Quaternion& other) const {
         Quaternion q{quaternion_ + other.quaternion_};
         return q;
