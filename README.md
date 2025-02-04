@@ -13,6 +13,8 @@
 - Деление на скаляр типа T
 - Унарный минус
 
+Почитать о представлении кватеринона в виде матрицы и про операции над ними можно на https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D1%82%D0%B5%D1%80%D0%BD%D0%B8%D0%BE%D0%BD
+
 ## Примеры использования
 Пример создания и использования кватерниона:
 
@@ -24,8 +26,8 @@ int main() {
     Quaternion q2{4.0, 3.0, 2.0, 1.0};
     
     // Операции с кватернионами
-    Quaternion subtract = q1 - q2;  // subtract = {-3.0, -1.0, 1.0, 3.0}; 
-    Quaternion add = q1 + q2;  // add = {5.0, 5.0, 5.0, 5.0}
+    Quaternion subtract = q1 - q2;  // result_subtract = {-3.0, -1.0, 1.0, 3.0}; 
+    Quaternion add = q1 + q2;  // result_addition = {5.0, 5.0, 5.0, 5.0}
     //и т.д
 
     return 0;
@@ -38,57 +40,4 @@ int main() {
 
 ```bash
 git clone https://github.com/alexshain/Quaternions.git
-```
-
-Затем соберите проект, используя CMake:
-
-## 1.2 Сборка проекта
-Перейдите в каталог проекта и создайте папку для сборки:
-
-```bash
-mkdir build
-cd build
-cmake ..
-make
-```
-
-
-## 2. Тесты
-Для запуска тестов выполните следующие шаги:
-
-## 2.1 Установите необходимые зависимости для тестирования:
-Для Ubuntu/Debian:
-
-```bash
-sudo apt update
-sudo apt install -y cmake gcc libcunit1 libcunit1-dev
-```
-
-Для macOS:
-
-```bash
-brew install cmake cunit
-```
-
-## 2.2 Соберите проект с тестами:
-Перейдите в каталог проекта и создайте папку для сборки:
-
-```bash
-mkdir build
-cd build
-cmake ..
-make
-```
-
-# 3. Запустите тесты
-Перейдите в каталог содержащий тесты:
-
-```bash
-cd build/tests
-```
-
-Используйте команду CTest для запуска тестов: 
-
-```bash
-ctest
 ```
